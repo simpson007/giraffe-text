@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav-wrapper">
     <div class="content">
       Labels.vue
     </div>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav{
+.nav-wrapper{
   border: 1px solid red;
   display: flex;
   flex-direction: column;
