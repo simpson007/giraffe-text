@@ -9,6 +9,8 @@ type TagListModel = {
     data: Tag[]
     fetch: () => Tag[]
     create: (name: string) => 'success | duplicated'
+    update: (id:string,name:string) => 'success' | 'not found' | 'duplicated'
+    remove:(id: string) => boolean
     save: () => void
 }
 const tagListModel: TagListModel = {
@@ -55,7 +57,7 @@ const tagListModel: TagListModel = {
         this.save()
         return true
     },
-        save()
+    save()
         {
             window.localStorage.setItem(localStorageKeyName, JSON.stringify(this.data));
         }
