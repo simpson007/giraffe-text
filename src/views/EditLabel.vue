@@ -27,12 +27,13 @@ import store from '@/store/index2';
   components: {Button, FormItem}
 })
 export default class EditLabel extends Vue {
+  // eslint-disable-next-line no-undef
   tag?: Tag = undefined;
 
   created() {
     this.tag = store.findTag(this.$route.params.id);
     if (!this.tag) {
-      this.$router.replace('404');
+      this.$router.replace('/404');
     }
   }
 
