@@ -21,7 +21,7 @@ const tagListModel: TagListModel = {
         this.data = JSON.parse(window.localStorage.getItem(localStorageKeyName) || '[]');
         return this.data;
     },
-    create(name) {
+    create(name:string) {
         const names = this.data.map(item => item.name);
         if (names.indexOf(name) >= 0) {
             return 'duplicated';
